@@ -1,0 +1,4 @@
+#!/bin/sh
+# bridge, from a checkout: runs in the project's own environment.
+here="$(cd "$(dirname "$0")/.." && pwd)"
+exec uv run --quiet --project "$here" python -m bridge "$@"
